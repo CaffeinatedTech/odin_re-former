@@ -1,0 +1,48 @@
+<%= form_with model: @user do |f| %>
+  <%= f.label :username, "Your Username Here" %>
+  <%= f.text_field :username %>
+
+  <%= f.label :email, "Email" %>
+  <%= f.email_field :email, placeholder: "example@example.com" %>
+
+  <%= f.label :password, "Password" %>
+  <%= f.password_field :password %>
+  <%= f.submit %>
+<% end %>
+
+<!--
+<%= form_tag users_path, method: :patch do %>
+  <%= label_tag :username, "Username" %>
+  <%= text_field_tag :username %>
+
+  <%= label_tag :email, "Email" %>
+  <%= email_field_tag :email %>
+
+  <%= label_tag :password, "Password" %>
+  <%= password_field_tag :password %>
+
+  <%= submit_tag "Submit" %>
+<% end %>
+-->
+
+<!--
+<form method="post" action="/users" accept-charset="UTF-8">
+  <label for="username">Username</label>
+  <input type="text" name="user[username]">
+
+  <label for="email">Email</label>
+  <input type="email" name="user[email]">
+
+  <label for="password">Password</label>
+  <input type="password" name="user[password]">
+  <input type="hidden" name="_method" value="patch">
+  <input
+  type="hidden"
+  name="authenticity_token"
+  value="<%= form_authenticity_token %>"
+  >
+
+  <input type="submit" value="Submit">
+  </form>
+-->
+
